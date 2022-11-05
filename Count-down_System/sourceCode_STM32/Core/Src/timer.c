@@ -21,6 +21,10 @@ void runTimer1()
 	if (timer1Counter <= 0) timer1Flag = 1;
 	return;
 }
+int getTimer1Flag()
+{
+	return timer1Flag;
+}
 
 int timer2Counter = 0;
 int timer2Flag = 0;
@@ -36,6 +40,10 @@ void runTimer2()
 	if (timer2Counter <= 0) timer2Flag = 1;
 	return;
 }
+int getTimer2Flag()
+{
+	return timer2Flag;
+}
 
 int timer3Counter = 0;
 int timer3Flag = 0;
@@ -50,4 +58,8 @@ void runTimer3()
 	if (timer3Counter > 0) timer3Counter--;
 	if (timer3Counter <= 0) timer3Flag = 1;
 	return;
+}
+int getTimer3Flag()
+{
+	return timer3Flag;
 }

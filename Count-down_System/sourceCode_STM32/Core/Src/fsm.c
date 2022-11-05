@@ -36,7 +36,7 @@ void fsm_simple_button_run()
 		  return;
 		}
 
-		if (timer1Flag && getLedCounter() != 0)
+		if (getTimer1Flag() && getLedCounter() != 0)
 		{
 		  setTimer1(1000);
 		  setLedCounter(getLedCounter()-1);
@@ -60,7 +60,7 @@ void fsm_simple_button_run()
 		break;
 	case INC_LP:
 		if (!is_button_pressed(1)) {buttonState = BUTTONS_RELEASED; setTimer1(defaultTimer1); return;}
-		if (timer2Flag)
+		if (getTimer2Flag())
 		{
 		  setTimer2(1000);
 		  setLedCounter(getLedCounter()+1);
@@ -69,7 +69,7 @@ void fsm_simple_button_run()
 		break;
 	case DEC_LP:
 		if (!is_button_pressed(2)) {buttonState = BUTTONS_RELEASED; setTimer1(defaultTimer1); return;}
-		if (timer2Flag)
+		if (getTimer2Flag())
 		{
 		  setTimer2(1000);
 		  setLedCounter(getLedCounter()-1);

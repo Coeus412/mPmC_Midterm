@@ -101,7 +101,7 @@ int main(void)
   while (1)
   {
     fsm_simple_button_run();
-    if (timer3Flag)
+    if (getTimer3Flag())
     {
     	setTimer3(500);
     	HAL_GPIO_TogglePin(LR_GPIO_Port, LR_Pin);

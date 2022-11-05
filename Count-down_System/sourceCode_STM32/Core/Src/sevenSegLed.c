@@ -7,7 +7,7 @@
 
 #include "sevenSegLed.h"
 
-static int led_counter = 4;
+static int led_counter = 0;
 void setLedCounter(int count)
 {
   if (count > 9) count = 0;
